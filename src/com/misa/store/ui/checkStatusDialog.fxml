@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="151.0" prefWidth="211.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.misa.store.ui.CheckStatusDialogController">
+   <children>
+      <GridPane>
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Port:" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label layoutX="10.0" layoutY="47.0" text="Host:">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label layoutX="10.0" layoutY="47.0" text="Url:" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label layoutX="10.0" layoutY="77.0" text="Path:" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="portTF" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="hostTF" layoutX="110.0" layoutY="13.0" GridPane.columnIndex="1" />
+            <TextField fx:id="pathTF" layoutX="110.0" layoutY="13.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="urlTF" layoutX="110.0" layoutY="13.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="pingBtn" GridPane.halignment="RIGHT" defaultButton="true" mnemonicParsing="false" onAction="#checkStatus" text="Ping" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <CheckBox mnemonicParsing="false" text="Save as new properties" GridPane.rowIndex="4" GridPane.columnSpan="2" fx:id="checkBox"/>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
